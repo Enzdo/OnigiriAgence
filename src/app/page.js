@@ -1,113 +1,252 @@
-import Image from "next/image";
+'use client'
+import { useEffect, useState } from 'react'
+import { ReCaptchaProvider } from "next-recaptcha-v3";
+import Header from '@/components/header'
+import Image from 'next/image';
+import image from "../Ellipse14.png";
+import svg from "../TickSquare.svg";
+import Footer from '@/components/footer';
+import CardProject from '@/components/card/card';
+import JsonData from './data/JsonCardClient.json'
+import CardCompetence from '@/components/card/cardCompetence';
+import JsonDataCompetence from './data/JsonCardCompetence.json'
+import sendMail from '../service/mailservice';
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 export default function Home() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const [captcha, setcaptcha] = useState()
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if(captcha){
+      console.log(" le captcha a était verifier ! ")
+      console.log(formData);
+      sendMail(formData)
+        .then(() => {
+          // Réinitialiser le formulaire après la soumission si nécessaire
+          setFormData({
+            firstName: '',
+            lastName: '',
+            phoneNumber: '',
+            email: '',
+            subject: '',
+            message: ''
+          });
+        })
+        .catch((error) => {
+          console.error("Error while sending mail:", error);
+        });
+    }else{
+      console.log("le captha n'a pas était fait ")
+    }
+    // Vous pouvez maintenant utiliser les données stockées dans formData comme vous le souhaitez
+   
+  };
+
+
+
+
+  
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+    <main className="flex w-screen  flex-col items-center  bg-white ">
+        <Header></Header>
+        <div className='flex flex-row md:justify-start justify-center xl:px-20 lg:px-20 md:px-20 px-8 w-full pt-20'>
+          <div className='flex flex-col gap-y-10 md:w-8/12 w-full ' data-aos="fade-right">
+              <h1 className='text-black xl:text-[54px] lg:text-[52px]  md:text-[38px] text-[30px] text-lg font-bold  leading-relaxed 	 w-full	md:text-left text-center'>Concevons ensemble des sites web <span className='text-[#E8375B]'>exceptionnels</span>, taillés sur mesure.</h1>
+              <p className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-xs md:text-left text-center '>Nous ne nous contentons pas de concevoir un site web, nous forgeons une présence en ligne convaincante, bien au-delà d'une simple vitrine. Notre mission est de vous apporter de nouveaux clients grâce à une expérience digitale exceptionnelle.</p>
+              <div className='flex md:flex-row flex-col md:gap-y-0 gap-y-4 gap-x-10 md:justify-start justify-center items-center'>
+                  <a href="#" className="text-[#ffffff] bg-[#E8375B] border-2 transition-all hover:scale-105 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">Prendre contact</a>
+                  <p className='text-black font-bold text-xs'>30+ entreprises propulsées 🚀</p>
+              </div>
+          </div>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
               priority
+              src={image}
+              className=" z-0 absolute right-0 left-0 top-0 w-screen"
+              alt="Follow us on Twitter"
             />
-          </a>
         </div>
-      </div>
+        <div className='flex flex-col md:justify-start justify-center  xl:px-20 lg:px-20 md:px-20 px-8 w-full py-48'>
+            <div className='flex flex-col gap-y-4 '>
+                <h3 className='text-[#E8375B] font-normal md:text-3xl text-lg tracking-[0.2em]  md:text-left text-center  '>SERVICE</h3>
+                <h2 className='text-black xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-bold md:text-left text-center  '>🎨 Notre expertise</h2>
+                <p className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-sm md:text-left text-center '>Nous ne sommes pas juste une autre agence, nous sommes votre chemin vers des projets web exceptionnels.</p>
+            </div>
+            <div className='flex flex-wrap md:items-start items-center pt-10 gap-5 '>
+              {JsonDataCompetence.map((item, index) => (
+                  <CardCompetence key={index} data={item}></CardCompetence>
+                
+              ))}
+              
+            </div>
+        </div>
+        <div className='flex flex-col md:justify-start justify-center items-center xl:px-20 lg:px-20 md:px-20 px-4 w-full gap-y-20 '>
+            <div className='flex flex-col gap-y-4 w-full'>
+                <h3 className='text-[#E8375B] font-normal md:text-3xl text-lg tracking-[0.2em]  md:text-left text-center  '>OFFRE</h3>
+                <h2 className='text-black xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-bold md:text-left text-center  '>👨‍🔧 L’offre qui vous propulse</h2>
+                <p className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-sm md:text-left text-center '>Une offre pour aller à l’éssentiel avec un résultat clé en main.</p>
+            </div>
+            <div className='flex w-full items-center justify-center pt-10'>
+              <div class="w-full flex flex-col items-center max-w-sm p-4 bg-white rounded-lg shadow sm:p-8 border-[#E8375B] md:border-4  border-2">
+                  <p className='p-6 md:border-4  border-2 border-[#E8375B] bg-white rounded-full w-fit text-6xl -mt-20'>🚀</p>
+                  <h5 class="text-gray-500 text-xl  text-left py-4">Plan Standard</h5>
+                  <div class="flex items-baseline text-gray-900 ">
+                    <span class="text-5xl text-[#E8375B] font-extrabold tracking-tight">49€</span>
+                    <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/mois</span>
+                  </div>
+                  <p className='text-slate-500 font-medium w-10/12 md:text-left text-center'>500€ HT de frais de création</p>
+                  <ul role="list" class="space-y-5 my-7">
+                  <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800  ms-3"> page ( Site vitrine )</span>
+                  </li>
+                  <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800  ms-3">Site responsive</span>
+                  </li>
+                  <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800  ms-3">3 retouches par mois incluse</span>
+                  </li>
+                  <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800 ms-3">Direction artistique personnalisé</span>
+                  </li>
+                  <li class="flex items-center ">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800 ms-3">Optimisation de la
+structure du site 
+pour le référencement</span>
+                  </li>
+                  <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800 ms-3">Site sous WordPress</span>
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                    </svg>
+                    <span class="text-base font-normal leading-tight text-gray-800 ms-3">24×7 phone & email support</span>
+                  </li>
+                  </ul>
+                  <button type="button" class="rounded-tl-md w-full md:text-base text-sm  rounded-bl-xl rounded-br-md rounded-tr-xl  bg-gradient-to-r from-black to-[#E8375B] py-4 px-6 transition-all hover:scale-105">Prendre contact</button>
+              </div>
+            </div>
+            <div className='flex flex-col gap-y-10 md:w-6/12 w-10/12  items-center -mt-10'>
+                      
+                      <p className='w-full text-center text-[#131629b5] md:text-sm text-xs '>D'autres suppléments tels que la création de designs pour vos flyers, 
+cartes de visite, etc., sont disponibles à partir de 10 à 50 euros, selon le support demandé.</p>
+                  </div>
+        </div>
+        <div className='flex flex-col md:justify-start justify-center  xl:px-20 lg:px-20 md:px-20 px-8 w-full py-48'>
+            <div className='flex flex-col gap-y-4 '>
+                <h3 className='text-[#E8375B] font-normal md:text-3xl text-lg tracking-[0.2em]  md:text-left text-center  '>PORTFOLIO</h3>
+                <h2 className='text-black xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-bold md:text-left text-center  '>🚧 Nos derniers travaux</h2>
+                <p className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-sm md:text-left text-center md:w-6/12 w-full  '>Discover our freshest creations that showcase the power of design 
+innocation and digital excellence. Explore our latast work and 
+witness the impact we bring to every project</p>
+            </div>
+            <div className='w-full pt-10 flex flex-wrap items-center gap-8'>
+            {JsonData.map((item, index) => (
+                <CardProject key={index} data={item}></CardProject>
+              
+            ))}
+            </div>
+        </div>
+        <div className='flex flex-col md:justify-start justify-center  xl:px-20 lg:px-20 md:px-20 px-8 w-full '>
+            <div className='flex flex-col gap-y-4 items-center '>
+                <h3 className='text-[#E8375B] font-normal md:text-3xl text-lg tracking-[0.2em]  md:text-left text-center  '>CONTACT</h3>
+                <h2 className='text-black xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-bold md:text-left text-center  '>Prendre contact</h2>
+            </div>
+            <form class="w-full py-10" onSubmit={handleSubmit}>
+              <div class="grid md:grid-cols-2 md:gap-6">
+                <div class="relative z-0 w-full mb-5 group">
+                    <input
+                      type="text"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-[#E8375B] focus:outline-none focus:ring-0 focus:border-[#E8375B] peer"
+                      
+                      required
+                    />
+                    <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#E8375B] peer-focus:dark:text-[#E8375B] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Prénom</label>
+                </div>
+                <div class="relative z-0 w-full mb-5 group">
+                    <input type="text" name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange} id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   dark:focus:border-[#E8375B] focus:outline-none focus:ring-0 focus:border-[#E8375B] peer" placeholder=" " required />
+                    <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#E8375B] peer-focus:dark:text-[#E8375B] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nom</label>
+                </div>
+              </div>
+              <div class="grid md:grid-cols-2 md:gap-6">
+                <div class="relative z-0 w-full mb-5 group">
+                    <input type="text" name="phoneNumber"
+                      value={formData.phoneNumber}
+                      onChange={handleChange} id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   dark:focus:border-[#E8375B] focus:outline-none focus:ring-0 focus:border-[#E8375B] peer" placeholder=" " required />
+                    <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#E8375B] peer-focus:dark:text-[#E8375B] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Votre numéro</label>
+                </div>
+                <div class="relative z-0 w-full mb-5 group">
+                    <input type="text" name="email"
+                      value={formData.email}
+                      onChange={handleChange} id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   dark:focus:border-[#E8375B] focus:outline-none focus:ring-0 focus:border-[#E8375B] peer" placeholder=" " required />
+                    <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#E8375B] peer-focus:dark:text-[#E8375B] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Votre mail</label>
+                </div>
+              </div>
+              <div class="relative z-0 w-full mb-5 group">
+                  <input type="mail" name="subject"
+                      value={formData.subject}
+                      onChange={handleChange} id="floating_repeat_password" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   dark:focus:border-[#E8375B] focus:outline-none focus:ring-0 focus:border-[#E8375B] peer" placeholder=" " required />
+                  <label for="floating_repeat_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#E8375B] peer-focus:dark:text-[#E8375B] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Sujet de votre demande</label>
+              </div>
+              <div class="relative z-0 w-full pb-10 ">
+                  <textarea id="message" name="message"
+                      value={formData.message}
+                      onChange={handleChange} rows="4" class="block p-2.5 w-full text-sm text-gray-900  border-2 border-gray-300 focus:border-[#E8375B]      " placeholder="Descrivez votre demande...."></textarea>
+              </div>
+              <ReCAPTCHA
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                onChange={setcaptcha}
+                className='w-full'
+              />,
+        
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+              <button type="submit" class="text-white bg-[#E8375B] hover:scale-105 transition-all w-full py-4 rounded-lg text-base">Envoyer</button>
+            </form>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        </div>
+        <Footer></Footer>
     </main>
   );
 }

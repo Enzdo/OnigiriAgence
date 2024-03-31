@@ -1,0 +1,32 @@
+[
+    {
+      "titre": "Carte 1",
+      "description": "Description de la carte 1.",
+      "image": "https://flowbite.com/docs/images/blog/image-1.jpg"
+    },
+    {
+      "titre": "Carte 2",
+      "description": "Description de la carte 2.",
+      "image": "https://flowbite.com/docs/images/blog/image-1.jpg"
+    },
+    {
+      "titre": "Carte 3",
+      "description": "Description de la carte 3.",
+      "image": "https://flowbite.com/docs/images/blog/image-1.jpg"
+    },
+    {
+      "titre": "Carte 4",
+      "description": "Description de la carte 4.",
+      "image": "https://flowbite.com/docs/images/blog/image-1.jpg"
+    },
+    {
+      "titre": "Carte 5",
+      "description": "Description de la carte 5.",
+      "image": "https://flowbite.com/docs/images/blog/image-1.jpg"
+    },
+    {
+      "titre": "Carte 6",
+      "description": "Description de la carte 6.",
+      "image": "https://flowbite.com/docs/images/blog/image-1.jpg"
+    }
+]
