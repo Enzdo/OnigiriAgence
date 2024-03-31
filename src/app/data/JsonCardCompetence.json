@@ -1,32 +1,22 @@
 [
-    {
-      "titre": "Carte 1",
-      "description": "Description de la carte 1.",
+  {
+      "titre": "Direction artistique",
+      "description": "Compétences et processus liés à la création artistique, y compris la conception graphique, la composition visuelle et la sélection d'éléments esthétiques pour des projets créatifs.",
       "emoji": "🎨"
-    },
-    {
-      "titre": "Carte 2",
-      "description": "Description de la carte 2.",
-      "emoji": "🎨"
-    },
-    {
-      "titre": "Carte 3",
-      "description": "Description de la carte 3.",
-      "emoji": "🎨"
-    },
-    {
-      "titre": "Carte 4",
-      "description": "Description de la carte 4.",
-      "emoji": "🎨"
-    },
-    {
-      "titre": "Carte 5",
-      "description": "Description de la carte 5.",
-      "emoji": "🎨"
-    },
-    {
-      "titre": "Carte 6",
-      "description": "Description de la carte 6.",
-      "emoji": "🎨"
-    }
+  },
+  {
+      "titre": "Développement web",
+      "description": "Compétences et techniques de programmation utilisées pour créer et maintenir des sites web et des applications web, y compris la conception, le codage et l'intégration de fonctionnalités interactives.",
+      "emoji": "💻"
+  },
+  {
+      "titre": "Montage vidéo",
+      "description": "Processus de sélection, d'organisation et d'édition de séquences vidéo pour créer une narration cohérente et captivante, en utilisant des logiciels de montage et d'effets spéciaux.",
+      "emoji": "🎬"
+  },
+  {
+      "titre": "Création print",
+      "description": "Processus de conception et de production de supports imprimés tels que des affiches, des dépliants, des brochures et des publications, en tenant compte des aspects visuels et techniques de l'impression.",
+      "emoji": "📰"
+  }
 ]
