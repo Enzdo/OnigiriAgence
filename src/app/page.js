@@ -71,7 +71,7 @@ export default function Home() {
         <div className='flex flex-row md:justify-start justify-center xl:px-20 lg:px-20 md:px-20 px-8 w-full pt-20'>
           <div className='flex flex-col gap-y-10 md:w-8/12 w-full ' data-aos="fade-right">
               <h1 className='text-black xl:text-[54px] lg:text-[52px]  md:text-[38px] text-[30px] text-lg font-bold  leading-relaxed 	 w-full	md:text-left text-center'>Concevons ensemble des sites web <span className='text-[#E8375B]'>exceptionnels</span>, taillés sur mesure.</h1>
-              <p className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-xs md:text-left text-center '>Nous ne nous contentons pas de concevoir un site web, nous forgeons une présence en ligne convaincante, bien au-delà d'une simple vitrine. Notre mission est de vous apporter de nouveaux clients grâce à une expérience digitale exceptionnelle.</p>
+              <p className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-xs md:text-left text-center '>Nous ne nous contentons pas de concevoir un site web, nous forgeons une présence en ligne convaincante, bien au-delà d une simple vitrine. Notre mission est de vous apporter de nouveaux clients grâce à une expérience digitale exceptionnelle.</p>
               <div className='flex md:flex-row flex-col md:gap-y-0 gap-y-4 gap-x-10 md:justify-start justify-center items-center'>
                   <a href="#" className="text-[#ffffff] bg-[#E8375B] border-2 transition-all hover:scale-105 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">Prendre contact</a>
                   <p className='text-black font-bold text-xs'>30+ entreprises propulsées 🚀</p>
@@ -164,7 +164,7 @@ pour le référencement</span>
             </div>
             <div className='flex flex-col gap-y-10 md:w-6/12 w-10/12  items-center -mt-10'>
                       
-                      <p className='w-full text-center text-[#131629b5] md:text-sm text-xs '>D'autres suppléments tels que la création de designs pour vos flyers, 
+                      <p className='w-full text-center text-[#131629b5] md:text-sm text-xs '>D autres suppléments tels que la création de designs pour vos flyers, 
 cartes de visite, etc., sont disponibles à partir de 10 à 50 euros, selon le support demandé.</p>
                   </div>
         </div>
