@@ -73,7 +73,7 @@ export default function Home() {
               <h1 className='text-black xl:text-[54px] lg:text-[52px]  md:text-[38px]  text-2xl font-bold  leading-relaxed 	 w-full	md:text-left text-center'>Concevons ensemble des sites web <span className='text-[#E8375B]'>exceptionnels</span>, taillés sur mesure.</h1>
               <p className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-xs md:text-left text-center '>Nous ne nous contentons pas de concevoir un site web, nous forgeons une présence en ligne convaincante, bien au-delà d une simple vitrine. Notre mission est de vous apporter de nouveaux clients grâce à une expérience digitale exceptionnelle.</p>
               <div className='flex md:flex-row flex-col md:gap-y-0 gap-y-4 gap-x-10 md:justify-start justify-center items-center'>
-                  <a href="#" className="text-[#ffffff] bg-[#E8375B] border-2 transition-all hover:scale-105 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">Prendre contact</a>
+                  <a href="#contact" className="text-[#ffffff] bg-[#E8375B] transition-all hover:scale-105 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">Prendre contact</a>
                   <p className='text-black font-bold text-xs'>30+ entreprises propulsées 🚀</p>
               </div>
           </div>
@@ -152,8 +152,14 @@ pour le référencement</span>
                   </svg>
                   <span class="text-base font-normal leading-tight text-gray-800 ms-3">Site sous WordPress</span>
                   </li>
+                  <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800 ms-3">Formation vidéo du cms</span>
+                  </li>
                   </ul>
-                  <button type="button" class="rounded-tl-md w-full md:text-base text-sm  rounded-bl-xl rounded-br-md rounded-tr-xl  bg-gradient-to-r from-black to-[#E8375B] py-4 px-6 transition-all hover:scale-105">Prendre contact</button>
+                  <a href='#contact' class="rounded-tl-md w-full md:text-base text-sm  rounded-bl-xl rounded-br-md rounded-tr-xl text-center  bg-gradient-to-r from-black to-[#E8375B] py-4 px-6 transition-all hover:scale-105">Prendre contact</a>
               </div>
             </div>
             <div className='flex flex-col gap-y-10 md:w-6/12 w-10/12  items-center -mt-10'>
@@ -180,7 +186,7 @@ witness the impact we bring to every project</p>
         <div className='flex flex-col md:justify-start justify-center  xl:px-20 lg:px-20 md:px-20 px-8 w-full '>
             <div className='flex flex-col gap-y-4 items-center '>
                 <h3 className='text-[#E8375B] font-normal md:text-3xl text-lg tracking-[0.2em]  md:text-left text-center  '>CONTACT</h3>
-                <h2 className='text-black xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-bold md:text-left text-center  '>Prendre contact</h2>
+                <h2 id='contact' className='text-black xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-bold md:text-left text-center  '>Prendre contact</h2>
             </div>
             <form class="w-full py-10" onSubmit={handleSubmit}>
               <div class="grid md:grid-cols-2 md:gap-6">

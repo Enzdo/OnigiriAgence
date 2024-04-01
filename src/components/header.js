@@ -15,7 +15,7 @@ export default function Header() {
     <header className="w-full pt-10 z-30" data-aos="fade-down">
       <nav className="xl:px-20 lg:px-20 md:px-20 px-5 py-2.5 ">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-          <a href="https://flowbite.com" className="flex items-center">
+          <a href="/" className="flex items-center">
             <Image
               priority
               src={Logo}
@@ -24,7 +24,7 @@ export default function Header() {
             />
           </a>
           <div className="flex items-center lg:order-2">
-            <a href="#" className="text-white bg-[#E8375B] transition-all hover:scale-105 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">Contact</a>
+            <a href="#contact" className="text-white bg-[#E8375B] transition-all hover:scale-105 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">Contact</a>
             <button
               onClick={toggleMenu}
               type="button"
