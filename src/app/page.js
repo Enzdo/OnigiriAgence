@@ -87,8 +87,8 @@ export default function Home() {
         <div className='flex flex-col md:justify-start justify-center  xl:px-20 lg:px-20 md:px-20 px-8 w-full py-48'>
             <div className='flex flex-col gap-y-4 '>
                 <h3 className='text-[#E8375B] font-normal md:text-3xl text-lg tracking-[0.2em]  md:text-left text-center  '>SERVICE</h3>
-                <h2 className='text-black xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-bold md:text-left text-center  '>🎨 Notre expertise</h2>
-                <p className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-sm md:text-left text-center '>Nous ne sommes pas juste une autre agence, nous sommes votre chemin vers des projets web exceptionnels.</p>
+                <h2 id='service' className='text-black xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-bold md:text-left text-center  '>🎨 Notre expertise</h2>
+                <p  className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-sm md:text-left text-center '>Nous ne sommes pas juste une autre agence, nous sommes votre chemin vers des projets web exceptionnels.</p>
             </div>
             <div className='flex flex-wrap md:items-start items-center pt-10 gap-5 '>
               {JsonDataCompetence.map((item, index) => (
@@ -110,7 +110,7 @@ export default function Home() {
                   <h5 class="text-gray-500 text-xl  text-left py-4">Plan Standard</h5>
                   <div class="flex items-baseline text-gray-900 ">
                     <span class="text-5xl text-[#E8375B] font-extrabold tracking-tight">49€</span>
-                    <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/mois</span>
+                    <span id='offre' class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/mois</span>
                   </div>
                   <p className='text-slate-500 font-medium w-10/12 md:text-left text-center'>500€ HT de frais de création</p>
                   <ul role="list" class="space-y-5 my-7">
@@ -166,7 +166,7 @@ cartes de visite, etc., sont disponibles à partir de 10 à 50 euros, selon le s
             <div className='flex flex-col gap-y-4 '>
                 <h3 className='text-[#E8375B] font-normal md:text-3xl text-lg tracking-[0.2em]  md:text-left text-center  '>PORTFOLIO</h3>
                 <h2 className='text-black xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-bold md:text-left text-center  '>🚧 Nos derniers travaux</h2>
-                <p className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-sm md:text-left text-center md:w-6/12 w-full  '>Discover our freshest creations that showcase the power of design 
+                <p id='portfolio' className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-sm md:text-left text-center md:w-6/12 w-full  '>Discover our freshest creations that showcase the power of design 
 innocation and digital excellence. Explore our latast work and 
 witness the impact we bring to every project</p>
             </div>

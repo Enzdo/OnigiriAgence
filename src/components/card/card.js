@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 export default function CardProject(props) {
   const { titre, description, image } = props.data; 
+  console.log(image)
 
   return (
     <div className="max-w-sm bg-white rounded-lg   shadow-lg transition-all hover:scale-105">

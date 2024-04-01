@@ -1,32 +1,23 @@
 [
-    {
-      "titre": "Carte 1",
-      "description": "Description de la carte 1.",
-      "image": "https://flowbite.com/docs/images/blog/image-1.jpg"
-    },
-    {
-      "titre": "Carte 2",
-      "description": "Description de la carte 2.",
-      "image": "https://flowbite.com/docs/images/blog/image-1.jpg"
-    },
-    {
-      "titre": "Carte 3",
-      "description": "Description de la carte 3.",
-      "image": "https://flowbite.com/docs/images/blog/image-1.jpg"
-    },
-    {
-      "titre": "Carte 4",
-      "description": "Description de la carte 4.",
-      "image": "https://flowbite.com/docs/images/blog/image-1.jpg"
-    },
-    {
-      "titre": "Carte 5",
-      "description": "Description de la carte 5.",
-      "image": "https://flowbite.com/docs/images/blog/image-1.jpg"
-    },
-    {
-      "titre": "Carte 6",
-      "description": "Description de la carte 6.",
-      "image": "https://flowbite.com/docs/images/blog/image-1.jpg"
-    }
+  {
+      "titre": "L'automobile e-motion",
+      "description": "Création d'un site web pour un spécialiste de l'automobile d'occasion dans le Val d'Oise",
+      "image": "/automobile.png"
+  },
+  {
+      "titre": "Jamino déco",
+      "description": "Création d'un site sur WordPress pour un spécialiste dans le BTP",
+      "image": "/jaminodeco.png"
+  },
+  {
+      "titre": "Prim décor",
+      "description": "Création d'un site sur WordPress pour un spécialiste dans le BTP",
+      "image": "/primdecor.png"
+  },
+  {
+      "titre": "Freevan",
+      "description": "Création d'un site web pour une nouvelle plateforme de l'occasion de van",
+      "image": "/freevan.png"
+  }
 ]
+

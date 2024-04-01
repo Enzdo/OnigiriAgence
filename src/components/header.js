@@ -43,16 +43,13 @@ export default function Header() {
           <div className={`lg:block ${isMenuOpen ? 'absolute left-0 top-0 bg-white w-screen h-screen flex items-center justify-center transition-all' : 'hidden'}`} id="mobile-menu-2">
             <ul className="flex flex-col w-8/12 mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 ">
               <li>
-                <a href="#" className="block pr-4 pl-3 text-[#000000b3] hover:text-[#000000] xl:text-sm lg:text-sm text-2xl lg:py-10 py-10 transition-all hover:scale-110" aria-current="page">Service</a>
+                <a href="#service" className="block pr-4 pl-3 text-[#000000b3] hover:text-[#000000] xl:text-sm lg:text-sm text-2xl lg:py-10 py-10 transition-all hover:scale-110" aria-current="page">Service</a>
               </li>
               <li>
-                <a href="#" className="block pr-4 pl-3 text-[#000000b3] hover:text-[#000000] xl:text-sm lg:text-sm text-2xl lg:py-10 py-10 transition-all hover:scale-110">Offre</a>
+                <a href="#offre" className="block pr-4 pl-3 text-[#000000b3] hover:text-[#000000] xl:text-sm lg:text-sm text-2xl lg:py-10 py-10 transition-all hover:scale-110">Offre</a>
               </li>
               <li>
-                <a href="#" className="block pr-4 pl-3 text-[#000000b3] hover:text-[#000000] xl:text-sm lg:text-sm text-2xl lg:py-10 py-10 transition-all hover:scale-110">Portfolio</a>
-              </li>
-              <li>
-                <a href="#" className="block pr-4 pl-3 text-[#000000b3] hover:text-[#000000] xl:text-sm lg:text-sm text-2xl lg:py-10 py-10 transition-all hover:scale-110">Avis</a>
+                <a href="#portfolio"  className="block pr-4 pl-3 text-[#000000b3] hover:text-[#000000] xl:text-sm lg:text-sm text-2xl lg:py-10 py-10 transition-all hover:scale-110">Portfolio</a>
               </li>
             </ul>
           </div>
