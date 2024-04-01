@@ -39,7 +39,7 @@ export default function Footer() {
                   <h2 class="mb-6 text-base font-semibold  uppercase text-white">Legal</h2>
                   <ul class="text-salte-200 text-sm">
                       <li class="mb-4">
-                          <a href="#" class="hover:underline">Mention légal</a>
+                          <a href="/mention-legal" class="hover:underline">Mention légal</a>
                       </li>
                   </ul>
               </div>
