@@ -18,6 +18,11 @@
       "titre": "Freevan",
       "description": "Création d'un site web pour une nouvelle plateforme de l'occasion de van",
       "image": "/freevan.png"
-  }
+  },
+  {
+    "titre": "AnimaCare",
+    "description": "Création d'un site web pour un vétérinaire avec WordPress.",
+    "image": "/AnimaCare.png"
+}
 ]
 
