@@ -339,7 +339,7 @@ cartes de visite, etc., sont disponibles à partir de 10 à 50 euros, selon le s
               <div class="relative z-0 w-full pb-10 ">
                   <textarea id="message" name="message"
                       value={formData.message}
-                      onChange={handleChange} rows="4" class="block p-2.5 w-full text-sm text-gray-900  border-2 border-gray-300 focus:border-[#E8375B]      " placeholder="Descrivez votre demande...."></textarea>
+                      onChange={handleChange} rows="4" class="block p-2.5 w-full text-sm text-gray-900  border-2 border-gray-300 focus:border-[#E8375B]      " placeholder="Décrivez votre demande, s'il vous plaît."></textarea>
               </div>
               <ReCAPTCHA
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
