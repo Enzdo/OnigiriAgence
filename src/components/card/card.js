@@ -6,9 +6,9 @@ export default function CardProject(props) {
   console.log(image)
 
   return (
-    <div className="max-w-sm bg-white rounded-lg   shadow-lg transition-all hover:scale-105">
-      <a href="#">
-        <Image width={500} height={300} className="rounded-t-lg" src={image} alt={titre} />
+    <div className="lg:max-w-sm w-full bg-white rounded-lg   shadow-lg transition-all hover:scale-105">
+      <a href="#" className='w-full'>
+        <Image width={500} height={300} className="rounded-t-lg w-full" src={image} alt={titre} />
       </a>
       <div className="p-5">
         <a href="#">

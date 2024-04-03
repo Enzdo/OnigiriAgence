@@ -6,7 +6,7 @@ export default function CardCompetence(props) {
   const { titre, description, emoji } = props.data; 
 
   return(
-    <div className="max-w-sm p-6 transition-all hover:scale-105 bg-white border border-gray-200 rounded-lg shadow-lg  flex flex-col gap-y-4 w-full">
+    <div className="lg:max-w-sm w-full p-6 transition-all hover:scale-105 bg-white border border-gray-200 rounded-lg shadow-lg  flex flex-col gap-y-4 ">
                  <p className='md:text-6xl text-4xl bg-white shadow-lg rounded-2xl p-4 w-fit'>{emoji}</p>
                   <a href="#">
                       <h5 className="mb-2 md:text-2xl text-lg font-semibold tracking-tight text-gray-900 pt-4 ">{titre}</h5>
