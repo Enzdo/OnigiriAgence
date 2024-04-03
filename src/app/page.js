@@ -104,7 +104,57 @@ export default function Home() {
                 <h2 className='text-black xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-bold md:text-left text-center  '>👨‍🔧 L’offre qui vous propulse</h2>
                 <p className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-sm md:text-left text-center '>Une offre pour aller à l’éssentiel avec un résultat clé en main.</p>
             </div>
-            <div className='flex w-full items-center justify-center pt-10'>
+            <div className=' w-fit grid lg:grid-cols-3 md:grid-cols-1 grid-cols-1 items-center lg:gap-10 md:gap-y-40 gap-y-40 pt-10'>
+              <div class="w-full flex flex-col items-center max-w-sm p-4 bg-white rounded-lg shadow sm:p-8 border-[#E8375B] md:border-4  border-2">
+                  <p className='p-6 md:border-4  border-2 border-[#E8375B] bg-white rounded-full w-fit text-6xl -mt-20'>🛩️</p>
+                  <h5 class="text-gray-500 text-xl  text-left py-4">Plan No-code</h5>
+                  <div class="flex items-baseline text-gray-900 ">
+                    <span class="text-5xl text-[#E8375B] font-extrabold tracking-tight">20€</span>
+                    <span id='offre' class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/mois</span>
+                  </div>
+                  <p className='text-slate-500 font-medium w-10/12 md:text-center text-center'>500€ HT de frais de création</p>
+                  <ul role="list" class="space-y-5 my-7">
+                  <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800  ms-3"> Site vitrine - 1 page</span>
+                  </li>
+                  <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800  ms-3">Site responsive</span>
+                  </li>
+                  <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800  ms-3">3 retouches par mois incluse</span>
+                  </li>
+                  <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800 ms-3">Direction artistique personnalisé</span>
+                  </li>
+                  <li class="flex items-center ">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800 ms-3">Optimisation de la
+structure du site 
+pour le référencement</span>
+                  </li>
+                  <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800 ms-3">Site sous Webflow</span>
+                  </li>
+                  </ul>
+                  <a href='#contact' class="rounded-tl-md w-full md:text-base text-sm  rounded-bl-xl rounded-br-md rounded-tr-xl text-center  bg-gradient-to-r from-black to-[#E8375B] py-4 px-6 transition-all hover:scale-105">Prendre contact</a>
+              </div>
               <div class="w-full flex flex-col items-center max-w-sm p-4 bg-white rounded-lg shadow sm:p-8 border-[#E8375B] md:border-4  border-2">
                   <p className='p-6 md:border-4  border-2 border-[#E8375B] bg-white rounded-full w-fit text-6xl -mt-20'>🚀</p>
                   <h5 class="text-gray-500 text-xl  text-left py-4">Plan Standard</h5>
@@ -112,19 +162,25 @@ export default function Home() {
                     <span class="text-5xl text-[#E8375B] font-extrabold tracking-tight">49€</span>
                     <span id='offre' class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/mois</span>
                   </div>
-                  <p className='text-slate-500 font-medium w-10/12 md:text-left text-center'>500€ HT de frais de création</p>
+                  <p className='text-slate-500 font-medium w-10/12 md:text-center text-center'>700€ HT de frais de création</p>
                   <ul role="list" class="space-y-5 my-7">
                   <li class="flex items-center">
                   <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                   </svg>
-                  <span class="text-base font-normal leading-tight text-gray-800  ms-3"> page ( Site vitrine )</span>
+                  <span class="text-base font-normal leading-tight text-gray-800  ms-3">Site web modulable avec 2 à 5 pages</span>
                   </li>
                   <li class="flex items-center">
                   <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                   </svg>
                   <span class="text-base font-normal leading-tight text-gray-800  ms-3">Site responsive</span>
+                  </li>
+                  <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800  ms-3">Achat de thèmes</span>
                   </li>
                   <li class="flex items-center">
                   <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -160,7 +216,61 @@ pour le référencement</span>
                   </li>
                   </ul>
                   <a href='#contact' class="rounded-tl-md w-full md:text-base text-sm  rounded-bl-xl rounded-br-md rounded-tr-xl text-center  bg-gradient-to-r from-black to-[#E8375B] py-4 px-6 transition-all hover:scale-105">Prendre contact</a>
+                  <a href="https://capable-kringle-b637be.netlify.app" className='text-sm pt-5 text-slate-700 transition-all hover:text-slate-950 '>Voir une démo</a>
               </div>
+              <div class="w-full flex flex-col items-center max-w-sm p-4 bg-white rounded-lg shadow sm:p-8 border-[#E8375B] md:border-4  border-2">
+                  <p className='p-6 md:border-4  border-2 border-[#E8375B] bg-white rounded-full w-fit text-6xl -mt-20'>🛸</p>
+                  <h5 class="text-gray-500 text-xl  text-left py-4">Devis personnalisé</h5>
+                  <div class="flex items-baseline text-gray-900 ">
+                    <span class="text-5xl text-[#E8375B] font-extrabold tracking-tight">xx€</span>
+                    <span id='offre' class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/mois</span>
+                  </div>
+                  <p className='text-slate-500 font-medium w-10/12 md:text-center text-center'>xxx€ HT de frais de création</p>
+                  <ul role="list" class="space-y-5 my-7">
+                  <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800  ms-3">Site web selons vos besoins</span>
+                  </li>
+                  <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800  ms-3">Site responsive</span>
+                  </li>
+                  <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800 ms-3">Direction artistique personnalisé</span>
+                  </li>
+                  <li class="flex items-center ">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800 ms-3">Optimisation de la
+structure du site 
+pour le référencement</span>
+                  </li>
+                  <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800 ms-3">Site sous wordpress</span>
+                  </li>
+                  <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-[#E8375B] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-800 ms-3">Formation vidéo du cms</span>
+                  </li>
+                  </ul>
+                  <a href='#contact' class="rounded-tl-md w-full md:text-base text-sm  rounded-bl-xl rounded-br-md rounded-tr-xl text-center  bg-gradient-to-r from-black to-[#E8375B] py-4 px-6 transition-all hover:scale-105">Obtenir un devis</a>
+                 
+              </div>
+          
+        
             </div>
             <div className='flex flex-col gap-y-10 md:w-6/12 w-10/12  items-center -mt-10'>
                       
