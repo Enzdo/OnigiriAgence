@@ -100,8 +100,8 @@ export default function Home() {
         </div>
         <div className='flex flex-col md:justify-start justify-center items-center xl:px-20 lg:px-20 md:px-20 px-4 w-full gap-y-20 '>
             <div className='flex flex-col gap-y-4 w-full'>
-                <h3 className='text-[#E8375B] font-normal md:text-3xl text-lg tracking-[0.2em]  md:text-left text-center  '>OFFRE</h3>
-                <h2 className='text-black xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-bold md:text-left text-center  '>👨‍🔧 L’offre qui vous propulse</h2>
+                <h3 id='offre' className='text-[#E8375B] font-normal md:text-3xl text-lg tracking-[0.2em]  md:text-left text-center  '>OFFRE</h3>
+                <h2  className='text-black xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-bold md:text-left text-center  '>👨‍🔧 L’offre qui vous propulse</h2>
                 <p className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-sm md:text-left text-center '>Une offre pour aller à l’éssentiel avec un résultat clé en main.</p>
             </div>
             <div className=' w-fit grid lg:grid-cols-3 md:grid-cols-1 grid-cols-1 items-center lg:gap-10 md:gap-y-40 gap-y-40 pt-10'>
@@ -110,7 +110,7 @@ export default function Home() {
                   <h5 class="text-gray-500 text-xl  text-left py-4">Plan No-code</h5>
                   <div class="flex items-baseline text-gray-900 ">
                     <span class="text-5xl text-[#E8375B] font-extrabold tracking-tight">20€</span>
-                    <span id='offre' class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/mois</span>
+                    <span  class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/mois</span>
                   </div>
                   <p className='text-slate-500 font-medium w-10/12 md:text-center text-center'>500€ HT de frais de création</p>
                   <ul role="list" class="space-y-5 my-7">

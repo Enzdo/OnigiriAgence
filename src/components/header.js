@@ -28,7 +28,7 @@ export default function Header() {
             <button
               onClick={toggleMenu}
               type="button"
-              className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 z-50 rounded-lg lg:hidden hover:scale-105 transition-all"
+              className={`inline-flex items-center p-2 ml-1 text-sm text-gray-500 z-50 rounded-lg lg:hidden hover:scale-105 transition-all ${isMenuOpen ? 'fixed' : ''}`}
               aria-controls="mobile-menu-2"
               aria-expanded={isMenuOpen ? "true" : "false"}
             >
@@ -40,16 +40,16 @@ export default function Header() {
               </svg>
             </button>
           </div>
-          <div className={`lg:block ${isMenuOpen ? 'absolute left-0 top-0 bg-white w-screen h-screen flex items-center justify-center transition-all' : 'hidden'}`} id="mobile-menu-2">
-            <ul className="flex flex-col w-8/12 mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 ">
+          <div className={`lg:block ${isMenuOpen ? 'fixed inset-0 bg-white w-screen h-screen flex items-center justify-center transition-all' : 'hidden'}`} id="mobile-menu-2">
+            <ul className="flex flex-col w-8/12 mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
               <li>
-                <a href="#service" className="block pr-4 pl-3 text-[#000000b3] hover:text-[#000000] xl:text-sm lg:text-sm text-2xl lg:py-10 py-10 transition-all hover:scale-110" aria-current="page">Service</a>
+                <a href="#service" className="block pr-4 pl-3 text-[#000000b3] hover:text-[#000000] xl:text-sm lg:text-sm text-2xl lg:py-10 py-10 transition-all hover:scale-110" aria-current="page" aria-expanded={isMenuOpen ? "true" : "false"}>Service</a>
               </li>
               <li>
-                <a href="#offre" className="block pr-4 pl-3 text-[#000000b3] hover:text-[#000000] xl:text-sm lg:text-sm text-2xl lg:py-10 py-10 transition-all hover:scale-110">Offre</a>
+                <a href="#offre" className="block pr-4 pl-3 text-[#000000b3] hover:text-[#000000] xl:text-sm lg:text-sm text-2xl lg:py-10 py-10 transition-all hover:scale-110" aria-expanded={isMenuOpen ? "true" : "false"}>Offre</a>
               </li>
               <li>
-                <a href="#portfolio"  className="block pr-4 pl-3 text-[#000000b3] hover:text-[#000000] xl:text-sm lg:text-sm text-2xl lg:py-10 py-10 transition-all hover:scale-110">Portfolio</a>
+                <a href="#portfolio" className="block pr-4 pl-3 text-[#000000b3] hover:text-[#000000] xl:text-sm lg:text-sm text-2xl lg:py-10 py-10 transition-all hover:scale-110" aria-expanded={isMenuOpen ? "true" : "false"}>Portfolio</a>
               </li>
             </ul>
           </div>
