@@ -102,7 +102,7 @@ export default function Home() {
             <div className='flex flex-col gap-y-4 w-full'>
                 <h3 id='offre' className='text-[#E8375B] font-normal md:text-3xl text-lg tracking-[0.2em]  md:text-left text-center  '>OFFRE</h3>
                 <h2  className='text-black xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-bold md:text-left text-center  '>👨‍🔧 L’offre qui vous propulse</h2>
-                <p className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-sm md:text-left text-center '>Une offre pour aller à l’éssentiel avec un résultat clé en main.</p>
+                <p className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-sm md:text-left text-center '>Une offre pour aller à l’essentiel avec un résultat clé en main.</p>
             </div>
             <div className=' w-fit grid lg:grid-cols-3 md:grid-cols-1 grid-cols-1 items-center lg:gap-10 md:gap-y-40 gap-y-40 pt-10'>
               <div class="w-full flex flex-col items-center max-w-sm p-4 bg-white rounded-lg shadow sm:p-8 border-[#E8375B] md:border-4  border-2">
