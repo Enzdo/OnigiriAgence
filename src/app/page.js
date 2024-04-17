@@ -153,7 +153,7 @@ pour le référencement</span>
                   <span class="text-base font-normal leading-tight text-gray-800 ms-3">Site sous Webflow</span>
                   </li>
                   </ul>
-                  <a href='#contact' class="rounded-tl-md w-full md:text-base text-sm  rounded-bl-xl rounded-br-md rounded-tr-xl text-center  bg-gradient-to-r from-black to-[#E8375B] py-4 px-6 transition-all hover:scale-105">Prendre contact</a>
+                  <a href='#contact' class="rounded-tl-md w-full md:text-base text-sm  rounded-bl-xl rounded-br-md rounded-tr-xl text-center  bg-gradient-to-r text-white from-black to-[#E8375B] py-4 px-6 transition-all hover:scale-105">Prendre contact</a>
               </div>
               <div class="w-full flex flex-col items-center max-w-sm p-4 bg-white rounded-lg shadow sm:p-8 border-[#E8375B] md:border-4  border-2">
                   <p className='p-6 md:border-4  border-2 border-[#E8375B] bg-white rounded-full w-fit text-6xl -mt-20'>🚀</p>
@@ -215,7 +215,7 @@ pour le référencement</span>
                   <span class="text-base font-normal leading-tight text-gray-800 ms-3">Formation vidéo du cms</span>
                   </li>
                   </ul>
-                  <a href='#contact' class="rounded-tl-md w-full md:text-base text-sm  rounded-bl-xl rounded-br-md rounded-tr-xl text-center  bg-gradient-to-r from-black to-[#E8375B] py-4 px-6 transition-all hover:scale-105">Prendre contact</a>
+                  <a href='#contact' class="rounded-tl-md w-full md:text-base text-sm  rounded-bl-xl rounded-br-md rounded-tr-xl text-center text-white  bg-gradient-to-r from-black to-[#E8375B] py-4 px-6 transition-all hover:scale-105">Prendre contact</a>
                   <a href="https://capable-kringle-b637be.netlify.app" className='text-sm pt-5 text-slate-700 transition-all hover:text-slate-950 '>Voir une démo</a>
               </div>
               <div class="w-full flex flex-col items-center max-w-sm p-4 bg-white rounded-lg shadow sm:p-8 border-[#E8375B] md:border-4  border-2">
@@ -266,7 +266,7 @@ pour le référencement</span>
                   <span class="text-base font-normal leading-tight text-gray-800 ms-3">Formation vidéo du cms</span>
                   </li>
                   </ul>
-                  <a href='#contact' class="rounded-tl-md w-full md:text-base text-sm  rounded-bl-xl rounded-br-md rounded-tr-xl text-center  bg-gradient-to-r from-black to-[#E8375B] py-4 px-6 transition-all hover:scale-105">Obtenir un devis</a>
+                  <a href='#contact' class="rounded-tl-md w-full md:text-base text-sm text-white  rounded-bl-xl rounded-br-md rounded-tr-xl text-center  bg-gradient-to-r from-black to-[#E8375B] py-4 px-6 transition-all hover:scale-105">Obtenir un devis</a>
                  
               </div>
           
