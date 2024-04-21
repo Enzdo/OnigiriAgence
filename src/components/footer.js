@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
           <div class="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                  <h2 class="mb-6 text-base font-semibold  uppercase text-white">Follow us</h2>
+                  <h2 class="mb-6 text-base font-semibold  uppercase text-white">Suivez-nous</h2>
                   <ul class="text-salte-200 text-sm">
                       <li class="mb-4">
                           <a href="https://github.com/enzdo" class="hover:underline text-white  ">Github</a>
@@ -36,7 +36,7 @@ export default function Footer() {
                   </ul>
               </div>
               <div>
-                  <h2 class="mb-6 text-base font-semibold  uppercase text-white ">Legal</h2>
+                  <h2 class="mb-6 text-base font-semibold  uppercase text-white ">Légal</h2>
                   <ul class="text-salte-200 text-sm">
                       <li class="mb-4">
                           <a href="/mention-legal" class="hover:underline text-white ">Mention légal</a>
