@@ -354,14 +354,7 @@ cartes de visite, etc., sont disponibles à partir de 10 à 50 euros, selon le s
 
         </div>
         <Footer></Footer>
-                  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBRJ89E1ZP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FBRJ89E1ZP');
-</script>
+                 
     </main>
   );
 }
