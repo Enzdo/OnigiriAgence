@@ -24,7 +24,7 @@ export default function Home() {
     message: ''
   });
 
-  const [captcha, setcaptcha] = useState()
+  const [captcha, setCaptcha] = useState(false); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
