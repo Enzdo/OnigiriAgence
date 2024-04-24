@@ -345,7 +345,7 @@ cartes de visite, etc., sont disponibles à partir de 10 à 50 euros, selon le s
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                 onChange={setcaptcha}
                 className='w-full'
-              />,
+              />
         
 
               <button type="submit" class="text-white bg-[#E8375B] hover:scale-105 transition-all w-full py-4 rounded-lg text-base">Envoyer</button>
