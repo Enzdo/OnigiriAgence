@@ -1,22 +1,23 @@
 [
-  {
+    {
       "titre": "Direction artistique",
       "description": "Compétences et processus liés à la création artistique, y compris la conception graphique, la composition visuelle et la sélection d'éléments esthétiques pour des projets créatifs.",
       "emoji": "🎨"
-  },
-  {
+    },
+    {
       "titre": "Développement web",
       "description": "Compétences et techniques de programmation utilisées pour créer et maintenir des sites web et des applications web, y compris la conception, le codage et l'intégration de fonctionnalités interactives.",
       "emoji": "💻"
-  },
-  {
-      "titre": "Montage vidéo",
-      "description": "Processus de sélection, d'organisation et d'édition de séquences vidéo pour créer une narration cohérente et captivante, en utilisant des logiciels de montage et d'effets spéciaux.",
+    },
+    {
+      "titre": "Publicités Facebook",
+      "description": "Gestion des campagnes publicitaires sur Facebook Ads, y compris la planification, la création de contenu et l'optimisation des performances.",
       "emoji": "🎬"
-  },
-  {
-      "titre": "Création print",
-      "description": "Processus de conception et de production de supports imprimés tels que des affiches, des dépliants, des brochures et des publications, en tenant compte des aspects visuels et techniques de l'impression.",
+    },
+    {
+      "titre": "Google Ads",
+      "description": "Gestion des campagnes publicitaires sur Google Ads, y compris la planification, la création de contenu et l'optimisation des performances.",
       "emoji": "📰"
-  }
-]
+    }
+  ]
+  
