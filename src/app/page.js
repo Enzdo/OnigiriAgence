@@ -70,8 +70,8 @@ export default function Home() {
         <Header></Header>
         <div className='flex flex-row md:justify-center justify-center items-center xl:px-20 lg:px-20 md:px-20 px-8 w-full pt-20'>
           <div className='flex flex-col gap-y-7 md:w-8/12  w-full ' data-aos="fade-right">
-              <h1 className='text-black xl:text-[54px] lg:text-[52px]  md:text-[38px]  text-3xl font-bold  leading-relaxed 	 w-full	md:text-center text-center'>Concevons ensemble des sites web <span className='text-[#E8375B]'>exceptionnels</span>, taillés sur mesure.</h1>
-              <p className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-xs md:text-center text-center '>Nous ne nous contentons pas de concevoir un site web, nous forgeons une présence en ligne convaincante, bien au-delà d une simple vitrine. </p>
+              <h1 className='text-black xl:text-[54px] lg:text-[52px]  md:text-[38px]  text-[28px] font-bold  leading-relaxed 	 w-full	md:text-center text-center'>Concevons ensemble des sites web <span className='text-[#E8375B]'>exceptionnels</span>, taillés sur mesure.</h1>
+              <p className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-xs md:text-center text-center lg:block hidden '>Nous ne nous contentons pas de concevoir un site web, nous forgeons une présence en ligne convaincante, bien au-delà d une simple vitrine. </p>
               <div className='flex md:flex-row flex-col md:gap-y-0 gap-y-4 gap-x-10 md:justify-center justify-center items-center'>
                   <a href="#contact" className="text-[#ffffff] bg-[#E8375B] transition-all hover:scale-105 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">Prendre contact</a>
                   <p className='text-black font-bold text-xs'>30+ entreprises propulsées 🚀</p>
@@ -84,13 +84,13 @@ export default function Home() {
               alt="Follow us on Twitter"
             />
         </div>
-        <div className='flex flex-col md:justify-start justify-center  xl:px-20 lg:px-20 md:px-20 px-8 w-full py-48'>
-            <div id='service' className='flex flex-col gap-y-4 '>
+        <div className='flex flex-col justify-center items-center  xl:px-20 lg:px-20 md:px-20 px-8 w-full py-48'>
+            <div id='service' className='flex flex-col gap-y-4 w-full items-center justify-center  '>
                 <h3 className='text-[#E8375B] font-normal md:text-3xl text-lg tracking-[0.2em]  md:text-left text-center  '>SERVICE</h3>
                 <h2  className='text-black xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-bold md:text-left text-center  '>🎨 Notre expertise</h2>
                 <p  className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-sm md:text-left text-center '>Nous ne sommes pas juste une autre agence, nous sommes votre chemin vers des projets web exceptionnels.</p>
             </div>
-            <div className='flex flex-wrap  items-center pt-10 gap-5 '>
+            <div className='flex flex-wrap justify-center  items-center pt-10 gap-5 '>
               {JsonDataCompetence.map((item, index) => (
                   <CardCompetence key={index} data={item}></CardCompetence>
                 
@@ -98,8 +98,8 @@ export default function Home() {
               
             </div>
         </div>
-        <div className='flex flex-col md:justify-start justify-center items-center xl:px-20 lg:px-20 md:px-20 px-4 w-full gap-y-20 '>
-            <div className='flex flex-col gap-y-4 w-full'>
+        <div className='flex flex-col md:justify-center justify-center items-center xl:px-20 lg:px-20 md:px-20 px-4 w-full gap-y-20 '>
+            <div className='flex flex-col gap-y-4 w-full items-center justify-center'>
                 <h3 id='offre' className='text-[#E8375B] font-normal md:text-3xl text-lg tracking-[0.2em]  md:text-left text-center  '>OFFRE</h3>
                 <h2  className='text-black xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-bold md:text-left text-center  '>👨‍🔧 L’offre qui vous propulse</h2>
                 <p className='text-[#131629b5]  xl:text-lg lg:text-base md:text-sm text-sm md:text-left text-center '>Une offre pour aller à l’essentiel avec un résultat clé en main.</p>
@@ -159,7 +159,7 @@ pour le référencement</span>
                   <p className='p-6 md:border-4  border-2 border-[#E8375B] bg-white rounded-full w-fit text-6xl -mt-20'>🚀</p>
                   <h5 class="text-gray-500 text-xl  text-left py-4">Plan Standard</h5>
                   <div class="flex items-baseline text-gray-900 ">
-                    <span class="text-5xl text-[#E8375B] font-extrabold tracking-tight">49€</span>
+                    <span class="text-5xl text-[#E8375B] font-extrabold tracking-tight">40€</span>
                     <span id='offre' class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/mois</span>
                   </div>
                   <p className='text-slate-500 font-medium w-10/12 md:text-center text-center'>700€ HT de frais de création</p>
@@ -278,12 +278,12 @@ pour le référencement</span>
 cartes de visite, etc., sont disponibles à partir de 10 à 50 euros, selon le support demandé.</p>
                   </div>
         </div>
-        <div className='flex flex-col md:justify-start justify-center  xl:px-20 lg:px-20 md:px-20 px-8 w-full py-48'>
-            <div id='portfolio' className='flex flex-col gap-y-4 '>
+        <div className='flex flex-col justify-center items-center  xl:px-20 lg:px-20 md:px-20 px-8 w-full py-48'>
+            <div id='portfolio' className='flex flex-col gap-y-4 w-full items-center justify-center  '>
                 <h3 className='text-[#E8375B] font-normal md:text-3xl text-lg tracking-[0.2em]  md:text-left text-center  '>PORTFOLIO</h3>
                 <h2 className='text-black xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-bold md:text-left text-center  '>🚧 Nos derniers travaux</h2>
             </div>
-            <div className='w-full pt-10 flex flex-wrap items-center gap-8'>
+            <div className='w-full pt-10 flex flex-wrap justify-center  items-center gap-8'>
             {JsonData.map((item, index) => (
                 <CardProject key={index} data={item}></CardProject>
               
